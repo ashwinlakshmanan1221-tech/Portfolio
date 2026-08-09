@@ -1,0 +1,293 @@
+\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ashwin Lakshmanan — Industrial Engineering, Data Analytics and AI/ML portfolio.">
+<title>Ashwin Lakshmanan | Portfolio</title>
+<style>
+:root{
+  --bg:#f5f3ee; --surface:#fbfaf7; --ink:#151a20; --muted:#64707a;
+  --teal:#126a63; --teal2:#0b4f4a; --blue:#3857b7; --line:#ddd9d1;
+  --dark:#162126; --white:#fff; --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:50;background:rgba(245,243,238,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Georgia,serif;font-size:22px;font-weight:800;letter-spacing:.08em}
+.links{display:flex;align-items:center;gap:28px}
+.links a{font:13px/1 monospace;color:#59636c;transition:.2s}
+.links a:hover{color:var(--teal)}
+.nav-btn{background:var(--teal);color:white!important;padding:14px 20px;border-radius:30px;font-weight:700!important}
+.menu{display:none;border:0;background:none;font-size:26px}
+
+.hero{min-height:calc(100vh - 78px);display:grid;grid-template-columns:1.02fr .98fr;gap:65px;align-items:center;padding:72px 0 85px}
+.kicker{font-family:Georgia,serif;font-style:italic;font-size:23px;color:#4f5962;margin-bottom:8px}
+.hero h1{font-family:Georgia,serif;font-size:clamp(64px,8.6vw,112px);line-height:.82;letter-spacing:-.055em;margin-bottom:30px}
+.hero h1 span{color:var(--blue)}
+.role{font:700 14px/1.7 monospace;text-transform:uppercase;letter-spacing:.13em;color:#075c61;max-width:650px}
+.hero-copy{font-size:18px;color:var(--muted);max-width:620px;margin-top:22px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #293138;border-radius:30px;padding:13px 21px;font:13px monospace;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.1)}
+.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.hero-visual{position:relative;min-height:610px;background:linear-gradient(145deg,#e7e4dc,#d6ded9);border-radius:4px;overflow:hidden;box-shadow:0 25px 80px rgba(25,35,40,.12)}
+.hero-visual:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.28);top:-100px;right:-80px}
+.profile{position:absolute;inset:7% 11%;width:78%;height:86%;object-fit:cover;object-position:center top;border:10px solid rgba(255,255,255,.65);box-shadow:0 22px 55px rgba(0,0,0,.2)}
+.open{position:absolute;top:25px;left:25px;background:#fff;border-radius:30px;padding:11px 16px;font:12px monospace;letter-spacing:.05em;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.open b{color:var(--teal)}
+.place{position:absolute;bottom:25px;right:25px;background:#17242a;color:#fff;padding:10px 16px;border-radius:25px;font:12px monospace}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:30px 20px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat strong{font:700 38px Georgia,serif;color:var(--blue)}
+.stat span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+
+section{padding:105px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font:700 12px monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+h2{font:52px/1.05 Georgia,serif;letter-spacing:-.03em;margin-bottom:38px}
+.split{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px}
+.lead{font:21px/1.6 Georgia,serif}
+.muted{color:var(--muted)}
+.about p{font-size:17px;color:var(--muted);margin-bottom:18px}
+
+.timeline{display:grid;gap:18px}
+.item{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:25px 0;border-top:1px solid var(--line)}
+.item .date{font:12px monospace;color:var(--teal);text-transform:uppercase}
+.item h3{font-size:22px;margin-bottom:5px}
+.item p{color:var(--muted);font-size:15px}
+.tagrow{margin-top:12px}
+.tag{display:inline-block;border:1px solid #c9c6be;border-radius:20px;padding:6px 10px;margin:3px;font:11px monospace;color:#4d5961}
+
+.project-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.project{background:var(--dark);color:white;border-radius:var(--radius);padding:32px;min-height:290px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+.project:after{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-90px;top:-90px}
+.project.small{background:#e7ebe6;color:var(--ink)}
+.project small{font:11px monospace;color:#8ed1c7;letter-spacing:.12em}
+.project.small small{color:var(--teal)}
+.project h3{font:34px/1.05 Georgia,serif;margin:20px 0 10px;max-width:600px}
+.project p{color:#cbd3d6;max-width:600px}
+.project.small p{color:var(--muted)}
+.project .tech{font:12px monospace;color:#8ed1c7}
+.project.small .tech{color:var(--teal)}
+
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cap{background:var(--surface);border:1px solid var(--line);padding:27px;border-radius:12px}
+.cap h3{font-size:18px;margin-bottom:12px}
+.cap p{color:var(--muted);font-size:14px}
+
+.credential-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+.credential{padding:20px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}
+.credential strong{font-size:15px}
+.credential span{font:12px monospace;color:var(--muted);text-align:right}
+
+.contact{background:#e5e9e3;border-radius:20px;padding:65px;text-align:center}
+.contact h2{margin-bottom:14px}
+.contact p{max-width:650px;margin:0 auto;color:var(--muted);font-size:17px}
+
+footer{padding:35px 0;color:#69737b;font:12px monospace}
+.footer{display:flex;justify-content:space-between;gap:20px}
+
+@media(max-width:850px){
+  .links{display:none}
+  .menu{display:block}
+  .hero{grid-template-columns:1fr;gap:40px}
+  .hero-visual{min-height:480px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .split,.project-grid,.credential-grid{grid-template-columns:1fr}
+  .cap-grid{grid-template-columns:1fr 1fr}
+  section{padding:75px 0}
+}
+@media(max-width:560px){
+  .hero h1{font-size:58px}
+  .hero-visual{min-height:390px}
+  .profile{inset:6% 9%;width:82%;height:88%}
+  .stats{grid-template-columns:1fr 1fr}
+  .cap-grid{grid-template-columns:1fr}
+  .item{grid-template-columns:1fr;gap:8px}
+  h2{font-size:42px}
+  .contact{padding:42px 20px}
+  .footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav">
+    <a class="logo" href="#home">ASHWIN.L</a>
+    <div class="links">
+      <a href="#profile">Profile</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact" class="nav-btn">Get in touch</a>
+    </div>
+    <button class="menu" onclick="document.querySelector('.links').classList.toggle('show')">☰</button>
+  </div>
+</nav>
+
+<main id="home">
+<section class="container hero">
+  <div>
+    <div class="kicker">Hey, there.</div>
+    <h1>I AM<br><span>ASHWIN</span></h1>
+    <div class="role">Industrial Engineering · Data Analytics · AI / ML Enthusiast</div>
+    <p class="hero-copy">
+      Industrial Engineering undergraduate building practical skills across data analytics,
+      machine learning, operations research and technology-driven problem solving.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:ashwinlakshmanan1221@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/ashwin-lakshmanan-71024233b/" target="_blank">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/ashwinlakshmanan1221-tech" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img class="profile" src="assets/profile.jpg" alt="Ashwin Lakshmanan">
+    <div class="open"><b>●</b> OPEN TO OPPORTUNITIES</div>
+    <div class="place">CHENNAI, IN</div>
+  </div>
+</section>
+
+<div class="container stats">
+  <div class="stat"><strong>01</strong><span>Machine Learning Internship</span></div>
+  <div class="stat"><strong>01</strong><span>Published IoT Project</span></div>
+  <div class="stat"><strong>08+</strong><span>Workshops & Credentials</span></div>
+  <div class="stat"><strong>2028</strong><span>Target Graduation</span></div>
+</div>
+
+<section id="profile">
+<div class="container split">
+  <div>
+    <div class="eyebrow">01 — Profile</div>
+    <h2>Engineering mindset.<br>Digital direction.</h2>
+  </div>
+  <div class="about">
+    <p class="lead">I’m an Industrial Engineering student interested in the space where engineering, analytics and technology meet.</p>
+    <p>I enjoy working with data, understanding processes and building practical digital solutions. My current focus areas include Python, SQL, Power BI, machine learning and operations research.</p>
+    <p>I’m especially interested in roles where I can combine analytical thinking with business and engineering problem solving without being limited to heavy software development.</p>
+  </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="container">
+  <div class="eyebrow">02 — Experience</div>
+  <h2>Learning by doing.</h2>
+  <div class="timeline">
+    <article class="item">
+      <div class="date">2024 · Internship</div>
+      <div>
+        <h3>Machine Learning using Python</h3>
+        <p>Worked with real-time datasets and gained practical exposure to preprocessing, model training, evaluation and visualization.</p>
+        <div class="tagrow"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-Learn</span><span class="tag">TensorFlow</span></div>
+      </div>
+    </article>
+    <article class="item">
+      <div class="date">Academic</div>
+      <div>
+        <h3>Industrial Engineering & Analytics</h3>
+        <p>Developing a foundation in operations research, optimization, forecasting, process analysis and engineering decision-making.</p>
+        <div class="tagrow"><span class="tag">Operations Research</span><span class="tag">Optimization</span><span class="tag">Analytics</span></div>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+  <div class="eyebrow">03 — Projects</div>
+  <h2>Built to solve problems.</h2>
+  <div class="project-grid">
+    <article class="project">
+      <div><small>FLAGSHIP PROJECT · IoT / MEDICAL</small>
+        <h3>IoT-Based Liquid Level Monitoring & Alert System</h3>
+        <p>A practical monitoring concept using ESP32, load-cell sensing and HX711 for liquid-level measurement and alerts in medical applications.</p>
+      </div>
+      <div class="tech">ESP32 · HX711 · Arduino IDE · Android Studio</div>
+    </article>
+    <article class="project small">
+      <div><small>DATA · ANALYTICS</small>
+        <h3>Analytics Dashboard</h3>
+        <p>Building dashboards and analysis workflows using SQL, Excel and Power BI to turn raw data into clear decisions.</p>
+      </div>
+      <div class="tech">SQL · Excel · Power BI</div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="capabilities">
+<div class="container">
+  <div class="eyebrow">04 — Capabilities</div>
+  <h2>What I work with.</h2>
+  <div class="cap-grid">
+    <article class="cap"><h3>Data & Analytics</h3><p>Python · SQL · Power BI · Excel · Data Visualization · Pandas</p></article>
+    <article class="cap"><h3>AI / ML</h3><p>Machine Learning · Scikit-Learn · TensorFlow · Data Preprocessing · Model Evaluation</p></article>
+    <article class="cap"><h3>Industrial Engineering</h3><p>Operations Research · Optimization · Forecasting · Process Improvement · Decision Analysis</p></article>
+    <article class="cap"><h3>Programming</h3><p>Python · Java · C · Android Studio · Arduino IDE</p></article>
+    <article class="cap"><h3>Problem Solving</h3><p>Analytical Thinking · Structured Problem Solving · Data-Driven Decision Making</p></article>
+    <article class="cap"><h3>Professional</h3><p>Communication · Teamwork · Presentation · Continuous Learning</p></article>
+  </div>
+</div>
+</section>
+
+<section id="credentials">
+<div class="container">
+  <div class="eyebrow">05 — Credentials</div>
+  <h2>Education & learning.</h2>
+  <div class="credential-grid">
+    <div class="credential"><strong>B.E. Industrial Engineering</strong><span>Anna University · CEG</span></div>
+    <div class="credential"><strong>Diploma in Information Technology</strong><span>PSG Polytechnic College</span></div>
+    <div class="credential"><strong>Mobile App & Web Development</strong><span>Bharathidasan University</span></div>
+    <div class="credential"><strong>Artificial Intelligence Workshop</strong><span>Cispro Training & Placement</span></div>
+    <div class="credential"><strong>Networking Workshop</strong><span>Refinement Software Solutions</span></div>
+    <div class="credential"><strong>Cybersecurity Industrial Training</strong><span>KGiSL MicroCollege</span></div>
+    <div class="credential"><strong>Robotics & AI Workshop</strong><span>PSG Polytechnic College</span></div>
+    <div class="credential"><strong>IJCRT Project Publication</strong><span>IoT Medical Application</span></div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="contact">
+    <div class="eyebrow">06 — Connect</div>
+    <h2>Let's build something useful.</h2>
+    <p>Open to internships, projects, learning opportunities and meaningful collaborations.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn primary" href="mailto:ashwinlakshmanan1221@gmail.com">ashwinlakshmanan1221@gmail.com</a>
+      <a class="btn" href="tel:+919786775652">+91 97867 75652</a>
+      <a class="btn" href="https://www.linkedin.com/in/ashwin-lakshmanan-71024233b/" target="_blank">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/ashwinlakshmanan1221-tech" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer">
+  <span>© 2026 Ashwin Lakshmanan</span>
+  <span>Industrial Engineering · Analytics · AI / ML</span>
+</div>
+</footer>
+
+<style>
+@media(max-width:850px){
+  .links.show{display:flex;position:absolute;top:78px;left:0;right:0;padding:20px;background:var(--bg);flex-direction:column;border-bottom:1px solid var(--line)}
+}
+</style>
+</body>
+</html>
